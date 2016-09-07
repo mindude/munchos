@@ -28,6 +28,51 @@ module.exports = function (grunt) {
   // Define the configuration for all the tasks
   grunt.initConfig({
 
+    aws: grunt.file.readJSON('deploy-keys.json'), // Load deploy variables
+    aws_s3: {
+      options: {
+        accessKeyId: '<%= aws.AWSAccessKeyId %>', // Use the variables
+        secretAccessKey: '<%= aws.AWSSecretKey %>', // You can also use env variables
+        region: 'us-east-1',
+        uploadConcurrency: 5, // 5 simultaneous uploads
+        downloadConcurrency: 5 // 5 simultaneous downloads
+      },
+      production: {
+        options: {
+          bucket: 'munch',
+          differential: true, //Upload files that have changed
+          mime: {
+            'dist/assets/production/LICENCE': 'text/plain'
+          }
+        },
+        files: [
+          {expand: true, cwd: 'dist/', src: ['**'], dest: '/'},
+          // CacheControl only applied to the assets folder
+          // LICENCE inside that folder will have ContentType equal to 'text/plain'
+        ]
+      },
+      clean_production: {
+        options: {
+          bucket: 'munch',
+          debug: true // Doesn't actually delete but shows log
+        },
+        files: [
+          {dest: 'app/', action: 'delete'},
+          {dest: 'assets/', exclude: "**/*.tgz", action: 'delete'}, // will not delete the tgz
+          {dest: 'assets/large/', exclude: "**/*copy*", flipExclude: true, action: 'delete'}, // will delete everything that has copy in the name
+        ]
+      },
+      download_production: {
+        options: {
+          bucket: 'favelix'
+        },
+        files: [
+          {dest: 'app/', cwd: 'backup/', action: 'download'}, // Downloads the content of app/ to backup/
+          {dest: 'assets/', cwd: 'backup-assets/', exclude: "**/*copy*", action: 'download'}, // Downloads everything which doesn't have copy in the name
+        ]
+      }
+    },
+
     // Project settings
     yeoman: appConfig,
 
@@ -220,7 +265,7 @@ module.exports = function (grunt) {
             }
           }
       }
-    }, 
+    },
 
     // Renames files for browser caching purposes
     filerev: {
@@ -479,5 +524,13 @@ module.exports = function (grunt) {
     'newer:jscs',
     'test',
     'build'
+  ]);
+
+  grunt.loadNpmTasks('grunt-aws-s3');
+
+  grunt.registerTask('deploy', [
+    'jshint',
+    'build',
+    'aws_s3'
   ]);
 };
