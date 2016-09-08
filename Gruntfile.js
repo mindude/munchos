@@ -64,7 +64,7 @@ module.exports = function (grunt) {
       },
       download_production: {
         options: {
-          bucket: 'favelix'
+          bucket: 'munchos'
         },
         files: [
           {dest: 'app/', cwd: 'backup/', action: 'download'}, // Downloads the content of app/ to backup/
@@ -383,7 +383,7 @@ module.exports = function (grunt) {
     ngtemplates: {
       dist: {
         options: {
-          module: 'munchApp',
+          module: 'munchosApp',
           htmlmin: '<%= htmlmin.dist.options %>',
           usemin: 'scripts/scripts.js'
         },
