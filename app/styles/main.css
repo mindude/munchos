@@ -9,6 +9,86 @@ body {
   padding: 0;
 }
 
+.sweet{
+  background-color: hotpink;
+  border-color: deeppink;
+}
+
+.sweet:hover{
+  background-color: palevioletred;
+  border-color: mediumvioletred;
+}
+
+.sweet:focus{
+  background-color: palevioletred;
+  border-color: black;
+}
+
+.sweet:active{
+  background-color: palevioletred;
+  border-color: mediumvioletred;
+}
+
+.sweet:active,
+.sweet.active,
+.open > .dropdown-toggle.sweet {
+  background-color: palevioletred;
+  border-color: mediumvioletred;
+}
+
+.sweet:hover,
+.sweet.active:hover,
+.open > .dropdown-toggle.sweet:hover,
+.sweet:active:focus,
+.sweet.active:focus,
+.open > .dropdown-toggle.sweet:focus,
+.sweet:active.focus,
+.sweet.active.focus,
+.open > .dropdown-toggle.sweet.focus {
+  background-color: palevioletred;
+  border-color: mediumvioletred;
+}
+
+.bitter{
+  background-color: sandybrown;
+  border-color: #c0a16b;
+}
+
+.bitter:hover{
+  background-color: #c0a16b;
+  border-color: #8a6d3b;
+}
+
+.bitter:focus{
+  background-color: #c0a16b;
+  border-color: black;
+}
+
+.bitter:active{
+  background-color: #c0a16b;
+  border-color: #8a6d3b;
+}
+
+.bitter:active,
+.bitter.active,
+.open > .dropdown-toggle.bitter {
+  background-color: #c0a16b;
+  border-color: #8a6d3b;
+}
+
+.bitter:hover,
+.bitter.active:hover,
+.open > .dropdown-toggle.bitter:hover,
+.bitter:active:focus,
+.bitter.active:focus,
+.open > .dropdown-toggle.bitter:focus,
+.bitter:active.focus,
+.bitter.active.focus,
+.open > .dropdown-toggle.bitter.focus {
+  background-color: #c0a16b;
+  border-color: #8a6d3b;
+}
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
