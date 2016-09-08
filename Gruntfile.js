@@ -39,7 +39,7 @@ module.exports = function (grunt) {
       },
       production: {
         options: {
-          bucket: 'munch',
+          bucket: 'munchos',
           differential: true, //Upload files that have changed
           mime: {
             'dist/assets/production/LICENCE': 'text/plain'
@@ -53,7 +53,7 @@ module.exports = function (grunt) {
       },
       clean_production: {
         options: {
-          bucket: 'munch',
+          bucket: 'munchos',
           debug: true // Doesn't actually delete but shows log
         },
         files: [
@@ -527,6 +527,10 @@ module.exports = function (grunt) {
   ]);
 
   grunt.loadNpmTasks('grunt-aws-s3');
+
+  grunt.registerTask('testdeploy', 
+    'aws_s3'
+  );
 
   grunt.registerTask('deploy', [
     'jshint',
