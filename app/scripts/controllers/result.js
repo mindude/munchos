@@ -17,5 +17,5 @@ angular.module('munchApp')
         .error(function (error) {
           console.log(error);
         });
-    }
+    };
   });
