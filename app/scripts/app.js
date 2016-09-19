@@ -44,6 +44,11 @@ angular
         controller: 'TestCtrl',
         controllerAs: 'test'
       })
+      .when('/GPSView', {
+        templateUrl: 'views/gpsview.html',
+        controller: 'GpsviewCtrl',
+        controllerAs: 'GPSView'
+      })
       .otherwise({
         redirectTo: '/'
       });
