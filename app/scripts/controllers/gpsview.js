@@ -10,9 +10,13 @@
 angular.module('munchApp')
   .controller('GpsviewCtrl', function ($scope, $http) {
     $scope.request = function() {
-      $http.get("http://food2fork.com/api/search?key=eabca0bf48175c869c837effc69b5c77&q=shredded%20chicken")
+      var params={
+        search: 'ice cream'
+      };
+
+      $http.put('https://ts4xmfum6f.execute-api.us-east-1.amazonaws.com/dev/connectToRecipesAPI', params)
         .success(function (data) {
-          $scope.recipes = data.recipes;
+          $scope.recipe = data.recipes;
         })
         .error(function (error) {
           console.log(error);

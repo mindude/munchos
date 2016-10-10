@@ -6,10 +6,10 @@
   }
 </style>
 <div>
-  <div ng-controller="GpsviewCtrl"><p>Results for recipes</p>
+  <div ng-controller="GpsviewCtrl" ng-init="request()"><p>Results for recipes</p>
 
-    <p>{{recipes[0].title}}</p>
-    <p>{{recipes[0].source_url}}</p>
+    <p>{{recipe[0].title}}</p>
+    <p>{{recipe[0].source_url}}</p>
 
   </div>
 
