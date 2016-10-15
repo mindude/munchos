@@ -88,6 +88,12 @@ body {
   color: white;
 }
 
+.salty:focus{
+  background-color: #0ca5ff;
+  border-color: blue;
+  color: white;
+}
+
 .saltymultiple{
   background-color: white;
   border-color: blue;
@@ -133,6 +139,12 @@ body {
 }
 
 .sweet:hover{
+  background-color: palevioletred;
+  border-color: mediumvioletred;
+  color:white;
+}
+
+.sweet:focus{
   background-color: palevioletred;
   border-color: mediumvioletred;
   color:white;
@@ -186,6 +198,12 @@ body {
   color:white;
 }
 
+.sour:focus{
+  background-color: #87bc0a;
+  border-color: #5fa500;
+  color:white;
+}
+
 .sourmultiple{
   background-color: white;
   border-color: #87bc0a;
@@ -234,6 +252,12 @@ body {
   color:white;
 }
 
+.bitter:focus{
+  background-color: #c0a16b;
+  border-color: #8a6d3b;
+  color:white;
+}
+
 .bittermultiple{
   background-color: white;
   border-color: #c0a16b;
@@ -277,6 +301,12 @@ body {
 }
 
 .savory:hover{
+  background-color: #dc0000;
+  border-color: #cd0000;
+  color:white;
+}
+
+.savory:focus{
   background-color: #dc0000;
   border-color: #cd0000;
   color:white;
