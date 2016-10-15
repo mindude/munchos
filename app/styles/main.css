@@ -40,124 +40,282 @@ body {
   margin-top:50px;
 }
 
+.isMultiple{
+  background-color: #52a300;
+  border-color:green;
+  color: white;
+}
+
+.isMultiple:focus{
+  background-color: #52a300;
+  border-color:green;
+  color: white;
+}
+
+.isMultiple:hover{
+  background-color: #52a300;
+  border-color:green;
+  color: white;
+}
+
+.notMultiple{
+  background-color: white;
+  border-color:green;
+  color: lawngreen;
+}
+
+.notMultiple:hover{
+  background-color: white;
+  border-color:green;
+  color: lawngreen;
+}
+
+.notMultiple:focus{
+  background-color: white;
+  border-color:green;
+  color: lawngreen;
+}
+
+.salty{
+  background-color: deepskyblue;
+  border-color: blue;
+  color: white;
+}
+
+.salty:hover{
+  background-color: #0ca5ff;
+  border-color: blue;
+  color: white;
+}
+
+.saltymultiple{
+  background-color: white;
+  border-color: blue;
+  color: deepskyblue;
+}
+
+.saltymultiple:focus{
+  background-color: white;
+  border-color: blue;
+  color: deepskyblue;
+}
+
+.saltymultiple:hover{
+  background-color: #d7efff;
+  border-color: blue;
+  color: deepskyblue;
+}
+
+.saltymultipleselected{
+  background-color: #0ca5ff;
+  border-color: blue;
+  color: white;
+}
+
+.saltymultipleselected:hover{
+  background-color: #0ca5ff;
+  border-color: blue;
+  color: white;
+}
+
+.saltymultipleselected:focus{
+  background-color: #0ca5ff;
+  border-color: blue;
+  color: white;
+}
+
+
+
 .sweet{
   background-color: hotpink;
   border-color: deeppink;
+  color:white;
 }
 
 .sweet:hover{
   background-color: palevioletred;
   border-color: mediumvioletred;
+  color:white;
 }
 
-.sweet:focus{
-  background-color: palevioletred;
-  border-color: black;
+.sweetmultiple{
+  background-color: white;
+  border-color: deeppink;
+  color:hotpink;
 }
 
-.sweet:active{
+.sweetmultiple:hover{
+  background-color: #ffe5e6;
+  border-color: mediumvioletred;
+  color:hotpink;
+}
+
+.sweetmultiple:focus{
+  background-color: white;
+  border-color: deeppink;
+  color:hotpink;
+}
+
+.sweetmultipleselected{
   background-color: palevioletred;
   border-color: mediumvioletred;
+  color:white;
 }
 
-.sweet:active,
-.sweet.active,
-.open > .dropdown-toggle.sweet {
+.sweetmultipleselected:hover{
   background-color: palevioletred;
   border-color: mediumvioletred;
+  color:white;
 }
 
-.sweet:hover,
-.sweet.active:hover,
-.open > .dropdown-toggle.sweet:hover,
-.sweet:active:focus,
-.sweet.active:focus,
-.open > .dropdown-toggle.sweet:focus,
-.sweet:active.focus,
-.sweet.active.focus,
-.open > .dropdown-toggle.sweet.focus {
+.sweetmultipleselected:focus{
   background-color: palevioletred;
   border-color: mediumvioletred;
+  color:white;
+}
+
+.sour{
+  background-color: #9fda0a;
+  border-color: #87bc0a;
+  color:white;
+}
+
+.sour:hover{
+  background-color: #87bc0a;
+  border-color: #5fa500;
+  color:white;
+}
+
+.sourmultiple{
+  background-color: white;
+  border-color: #87bc0a;
+  color:#9fda0a;
+}
+
+.sourmultiple:focus{
+  background-color: white;
+  border-color: #87bc0a;
+  color:#9fda0a;
+}
+
+.sourmultiple:hover{
+  background-color: #eaffd1;
+  border-color: #87bc0a;
+  color:#9fda0a;
+}
+
+.sourmultipleselected{
+  background-color: #87bc0a;
+  border-color: #5fa500;
+  color:white;
+}
+
+.sourmultipleselected:focus{
+  background-color: #87bc0a;
+  border-color: #5fa500;
+  color:white;
+}
+
+.sourmultipleselected:hover{
+  background-color: #87bc0a;
+  border-color: #5fa500;
+  color:white;
 }
 
 .bitter{
   background-color: sandybrown;
   border-color: #c0a16b;
+  color:white;
 }
 
 .bitter:hover{
   background-color: #c0a16b;
   border-color: #8a6d3b;
+  color:white;
 }
 
-.bitter:focus{
-  background-color: #c0a16b;
-  border-color: black;
+.bittermultiple{
+  background-color: white;
+  border-color: #c0a16b;
+  color:sandybrown;
 }
 
-.bitter:active{
-  background-color: #c0a16b;
-  border-color: #8a6d3b;
+.bittermultiple:focus{
+  background-color: white;
+  border-color: #c0a16b;
+  color:sandybrown;
 }
 
-.bitter:active,
-.bitter.active,
-.open > .dropdown-toggle.bitter {
-  background-color: #c0a16b;
-  border-color: #8a6d3b;
+.bittermultiple:hover{
+  background-color: #fff2c3;
+  border-color: #c0a16b;
+  color:sandybrown;
 }
 
-.bitter:hover,
-.bitter.active:hover,
-.open > .dropdown-toggle.bitter:hover,
-.bitter:active:focus,
-.bitter.active:focus,
-.open > .dropdown-toggle.bitter:focus,
-.bitter:active.focus,
-.bitter.active.focus,
-.open > .dropdown-toggle.bitter.focus {
+.bittermultipleselected{
   background-color: #c0a16b;
   border-color: #8a6d3b;
+  color:white;
 }
 
-.spicy{
+.bittermultipleselected:focus{
+  background-color: #c0a16b;
+  border-color: #8a6d3b;
+  color:white;
+}
+
+.bittermultipleselected:hover{
+  background-color: #c0a16b;
+  border-color: #8a6d3b;
+  color:white;
+}
+
+.savory{
   background-color: #ff0000;
   border-color: #dc0000;
+  color:white;
 }
 
-.spicy:hover{
+.savory:hover{
   background-color: #dc0000;
   border-color: #cd0000;
+  color:white;
 }
 
-.spicy:focus{
-  background-color: #dc0000;
-  border-color: black;
+.savorymultiple{
+  background-color: white;
+  border-color: #dc0000;
+  color:#ff0000;
 }
 
-.spicy:active{
+.savorymultiple:focus{
+  background-color: white;
+  border-color: #dc0000;
+  color:#ff0000;
+}
+
+.savorymultiple:hover{
+  background-color: #ffcfc8;
+  border-color: #cd0000;
+  color:#ff0000;
+}
+
+.savorymultipleselected{
   background-color: #dc0000;
   border-color: #cd0000;
+  color:white;
 }
 
-.spicy:active,
-.spicy.active,
-.open > .dropdown-toggle.spicy {
+.savorymultipleselected:focus{
   background-color: #dc0000;
   border-color: #cd0000;
+  color:white;
 }
 
-.spicy:hover,
-.spicy.active:hover,
-.open > .dropdown-toggle.spicy:hover,
-.spicy:active:focus,
-.spicy.active:focus,
-.open > .dropdown-toggle.spicy:focus,
-.spicy:active.focus,
-.spicy.active.focus,
-.open > .dropdown-toggle.spicy.focus {
+.savorymultipleselected:hover{
   background-color: #dc0000;
   border-color: #cd0000;
+  color:white;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
