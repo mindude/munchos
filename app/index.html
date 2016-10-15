@@ -3,6 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <meta property="og:url"           content="http://munchos.s3-website-us-east-1.amazonaws.com/#/" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Munchos" />
+    <meta property="og:description"   content="To satisfy your craving needs" />
+    <meta property="og:image"         content="../images/yeoman.png" />
+    <meta property="fb:app_id"        content="181979325539094"/>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -21,6 +27,65 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
+    <div id="fb-root"></div>
+
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=181979325539094";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <script type="text/javascript">
+
+      var objectToLike = 'http://munchos.s3-website-us-east-1.amazonaws.com/#/';
+
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '181979325539094', // App ID
+          status     : true,    // check login status
+          cookie     : true,    // enable cookies to allow the
+                                // server to access the session
+          xfbml      : true,     // parse page for xfbml or html5
+          // social plugins like login button below
+          version		 : 'v2.7',  // Specify an API version
+        });
+      };
+
+      // Load the SDK Asynchronously
+      (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+
+      function postLike() {
+        FB.api(
+          'https://graph.facebook.com/me/og.likes',
+          'post',
+          { object: objectToLike,
+            privacy: {'value': 'SELF'} },
+          function(response) {
+            if (!response) {
+              alert('Error occurred.');
+            } else if (response.error) {
+              document.getElementById('result').innerHTML =
+                'Error: ' + response.error.message;
+            } else {
+              document.getElementById('result').innerHTML =
+                '<a href=\"https://www.facebook.com/me/activity/' +
+                response.id + '\">' +
+                'Story created.  ID is ' +
+                response.id + '</a>';
+            }
+          }
+        );
+      }
+    </script>
+
     <div class="header">
       <div class="navbar navbar-default" role="navigation">
         <div class="container">
@@ -39,7 +104,7 @@
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
 
             <ul class="nav navbar-nav">
-              <div style = "padding-top: 15px" class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="false" onclick="login()">Login with Facebook</div>
+              <div style = "padding-top: 15px" class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="true"></fb:login-button></div>
 
             </ul>
           </div>
@@ -53,13 +118,11 @@
 
     <div class="footer">
       <div class="container">
+        
+        <div class="fb-page" data-href="https://www.facebook.com/MunchosApp/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/MunchosApp/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/MunchosApp/">Munchos</a></blockquote></div>
+        <p></p>
         <p><span class="glyphicon glyphicon-tower"></span> from the Keeper Team</p>
-        <div
-          class="fb-like"
-          data-share="true"
-          data-width="450"
-          data-show-faces="true">
-        </div>
+
       </div>
     </div>
 
@@ -98,23 +161,6 @@
         <script src="scripts/controllers/test.js"></script>
         <script src="scripts/controllers/gpsview.js"></script>
         <!-- endbuild -->
-    <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '181979325539094',
-          xfbml      : true,
-          version    : 'v2.7'
-        });
-      };
-
-      (function(d, s, id){
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
 
 </body>
 </html>
