@@ -1,17 +1,25 @@
 <div ng-controller="MainCtrl">
   <div style="text-align: center;">LOGO</div>
   <br>
+<div style="text-align: center">
+  <image src="images/yeoman.png"></image>
+</div>
   <br>
 
   <div class="row">
     <div style="padding-left:45px" class="col-xs-12 col-xs-offset-5">
-      <button ng-click="SaltBtn()" type="button" class="btn btn-default btn-for-flavors">Salty</button>
+      <button ng-click="SaltBtn()" type="button" class="btn btn-info btn-default btn-for-flavors">Salty</button>
     </div>
     <br>
-    <div class="col-xs-5 col-xs-offset-3" style="padding-top: 13px">
+    <div class="col-xs-2 col-xs-offset-3" style="padding-top: 13px">
       <button ng-click="SourBtn()" type="button" class="btn btn-warning spacing-top btn-for-flavors">Sour</button>
     </div>
-    <div class="col-xs-4" style="padding-top: 13px">
+
+    <div class="col-xs-2" style="padding-top: 30px; padding-left: 60px">
+      <button ng-click="MultipleSelectionBtn()" type="button" class="btn btn-success spacing-top btn-for-multipleselections">Bitter</button>
+    </div>
+
+    <div class="col-xs-2 col-xs-offset-1" style="padding-top: 13px">
       <button ng-click="BitterBtn()" type="button" class="btn btn-primary bitter spacing-top btn-for-flavors">Bitter</button>
     </div>
     <br>
@@ -19,7 +27,7 @@
       <button ng-click="SweetBtn()" type="button" class="btn btn-success sweet spacing-top btn-for-flavors">Sweet</button>
     </div>
     <div class="col-xs-4" style="padding-top: 30px; padding-left:30px">
-      <button ng-click="SpicyBtn()" type="button" class="btn btn-danger spacing-top btn-for-flavors">Spicy</button>
+      <button ng-click="SpicyBtn()" type="button" class="btn btn-danger spicy spacing-top btn-for-flavors">Spicy</button>
     </div>
     <div class="col-xs-12 col-xs-offset-4" style="padding-top: 45px">
 

@@ -20,8 +20,16 @@ body {
 }
 
 .btn-for-flavors{
-  height:40px;
+  border-radius: 50px;
+  height:100px;
   width:100px;
+}
+
+.btn-for-multipleselections{
+  border-radius: 35px;
+  height:70px;
+  width:70px;
+  text-align: center;
 }
 
 .spacing-top{
@@ -112,6 +120,46 @@ body {
   border-color: #8a6d3b;
 }
 
+.spicy{
+  background-color: #ff0000;
+  border-color: #dc0000;
+}
+
+.spicy:hover{
+  background-color: #dc0000;
+  border-color: #cd0000;
+}
+
+.spicy:focus{
+  background-color: #dc0000;
+  border-color: black;
+}
+
+.spicy:active{
+  background-color: #dc0000;
+  border-color: #cd0000;
+}
+
+.spicy:active,
+.spicy.active,
+.open > .dropdown-toggle.spicy {
+  background-color: #dc0000;
+  border-color: #cd0000;
+}
+
+.spicy:hover,
+.spicy.active:hover,
+.open > .dropdown-toggle.spicy:hover,
+.spicy:active:focus,
+.spicy.active:focus,
+.open > .dropdown-toggle.spicy:focus,
+.spicy:active.focus,
+.spicy.active.focus,
+.open > .dropdown-toggle.spicy.focus {
+  background-color: #dc0000;
+  border-color: #cd0000;
+}
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -161,6 +209,8 @@ body {
 .marketing p + h4 {
   margin-top: 28px;
 }
+
+
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
