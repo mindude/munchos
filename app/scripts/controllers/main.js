@@ -26,12 +26,12 @@ angular.module('munchApp')
     $scope.isSourSelected = false;
 
     $scope.SaltBtn = function(){
-      if($scope.isMultiple==false) {
+      if($scope.isMultiple===false) {
         $location.path('/result');
       }
       else{
         $scope.isSaltySelected  = !$scope.isSaltySelected;
-        if($scope.isSaltySelected ==false){
+        if($scope.isSaltySelected ===false){
           document.getElementById("TheSaltyButton").className = "btn saltymultiple spacing-top btn-for-flavors";
         }
         else{
@@ -40,12 +40,12 @@ angular.module('munchApp')
       }
     };
     $scope.SourBtn = function(){
-      if($scope.isMultiple==false) {
+      if($scope.isMultiple===false) {
         $location.path('/result');
       }
       else{
         $scope.isSourSelected  = !$scope.isSourSelected;
-        if($scope.isSourSelected ==false){
+        if($scope.isSourSelected ===false){
           document.getElementById("TheSourButton").className = "btn sourmultiple spacing-top btn-for-flavors";
         }
         else{
@@ -54,12 +54,12 @@ angular.module('munchApp')
       }
     };
     $scope.BitterBtn = function(){
-      if($scope.isMultiple==false) {
+      if($scope.isMultiple===false) {
         $location.path('/result');
       }
       else{
         $scope.isBitterSelected  = !$scope.isBitterSelected;
-        if($scope.isBitterSelected ==false){
+        if($scope.isBitterSelected ===false){
           document.getElementById("TheBitterButton").className = "btn bittermultiple spacing-top btn-for-flavors";
         }
         else{
@@ -68,12 +68,12 @@ angular.module('munchApp')
       }
     };
     $scope.SweetBtn = function(){
-      if($scope.isMultiple==false) {
+      if($scope.isMultiple===false) {
         $location.path('/result');
       }
       else{
         $scope.isSweetSelected  = !$scope.isSweetSelected;
-        if($scope.isSweetSelected ==false){
+        if($scope.isSweetSelected ===false){
           document.getElementById("TheSweetButton").className = "btn sweetmultiple spacing-top btn-for-flavors";
         }
         else{
@@ -82,12 +82,12 @@ angular.module('munchApp')
       }
     };
     $scope.SavoryBtn = function(){
-      if($scope.isMultiple==false) {
+      if($scope.isMultiple===false) {
         $location.path('/result');
       }
       else{
         $scope.isSavorySelected  = !$scope.isSavorySelected;
-        if($scope.isSavorySelected ==false){
+        if($scope.isSavorySelected ===false){
           document.getElementById("TheSavoryButton").className = "btn savorymultiple spacing-top btn-for-flavors";
         }
         else{
@@ -97,7 +97,7 @@ angular.module('munchApp')
     };
     $scope.MultipleSelectionBtn = function(){
       $scope.isMultiple = !$scope.isMultiple;
-      if($scope.isMultiple==false) {
+      if($scope.isMultiple===false) {
         document.getElementById("TheMultipleSelectionButton").className = "btn notMultiple spacing-top btn-for-multipleselections";
         document.getElementById("TheSweetButton").className = "btn sweet spacing-top btn-for-flavors";
         document.getElementById("TheSaltyButton").className = "btn salty spacing-top btn-for-flavors";
