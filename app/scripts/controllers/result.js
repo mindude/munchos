@@ -28,11 +28,13 @@ angular.module('munchApp')
     var imageURL = [];
     var sourceURL = [];
     var params = JSON.parse(results);
+    console.log(JSON.stringify(params));
     $http({
       method: 'POST',
       url: 'https://4md5n45sf8.execute-api.us-east-1.amazonaws.com/dev/searchFoodFlavor',
       data: params
     }).success(function (data) {
+      console.log(JSON.stringify(data));
       for (var i = 0; i<resultNumber;i++ ){
         var stringName = "";
         for (var e = 0; e < data[i].name.length; e++) {
@@ -52,6 +54,7 @@ angular.module('munchApp')
               var params2={
                 id: data1.recipes[0].recipe_id
               };
+              console.log("Last Minute Test" + data1.recipes[0].recipe_id);
               imageURL.push(data1.recipes[0].image_url);
               sourceURL.push(data1.recipes[0].source_url);
               $scope.imageurl = imageURL;

@@ -27,6 +27,13 @@ angular.module('munchApp')
     $scope.SaltBtn = function(){
       if($scope.isMultiple===false) {
         $scope.isSaltySelected = 1;
+        var params = {
+          bitter: $scope.isBitterSelected,
+          salty: $scope.isSaltySelected,
+          sweet: $scope.isSweetSelected,
+          sour: $scope.isSourSelected,
+          url: "https://graph.facebook.com/v2.8/me?fields=posts%7Bmessage%7D&access_token=EAACEdEose0cBAElXAPCcOZAl1awywsp92H9jeAApMnrp3RWilo2MCQPqAsXc2BKEKEadKs4AKGekeEq3rGAHB5jZBUkVZC9bH26TH9m5TJmKm0TKPRLlWxUClMmS4MXAt8ZBn3YFYASeeQC1tYWKl4PF6wC776ROkpOauzNdtwZDZD"
+        };
         $location.path('/result');
       }
       else{
@@ -44,6 +51,13 @@ angular.module('munchApp')
     $scope.SourBtn = function(){
       if($scope.isMultiple===false) {
         $scope.isSourSelected = 1;
+        var params = {
+          bitter: $scope.isBitterSelected,
+          salty: $scope.isSaltySelected,
+          sweet: $scope.isSweetSelected,
+          sour: $scope.isSourSelected,
+          url: "https://graph.facebook.com/v2.8/me?fields=posts%7Bmessage%7D&access_token=EAACEdEose0cBAElXAPCcOZAl1awywsp92H9jeAApMnrp3RWilo2MCQPqAsXc2BKEKEadKs4AKGekeEq3rGAHB5jZBUkVZC9bH26TH9m5TJmKm0TKPRLlWxUClMmS4MXAt8ZBn3YFYASeeQC1tYWKl4PF6wC776ROkpOauzNdtwZDZD"
+        };
         $location.path('/result');
       }
       else{
@@ -60,6 +74,13 @@ angular.module('munchApp')
     $scope.BitterBtn = function(){
       if($scope.isMultiple===false) {
         $scope.isBitterSelected = 1;
+        var params = {
+          bitter: $scope.isBitterSelected,
+          salty: $scope.isSaltySelected,
+          sweet: $scope.isSweetSelected,
+          sour: $scope.isSourSelected,
+          url: "https://graph.facebook.com/v2.8/me?fields=posts%7Bmessage%7D&access_token=EAACEdEose0cBAElXAPCcOZAl1awywsp92H9jeAApMnrp3RWilo2MCQPqAsXc2BKEKEadKs4AKGekeEq3rGAHB5jZBUkVZC9bH26TH9m5TJmKm0TKPRLlWxUClMmS4MXAt8ZBn3YFYASeeQC1tYWKl4PF6wC776ROkpOauzNdtwZDZD"
+        };
         $location.path('/result');
       }
       else{
@@ -76,6 +97,13 @@ angular.module('munchApp')
     $scope.SweetBtn = function(){
       if($scope.isMultiple===false) {
         $scope.isSweetSelected = 1;
+        var params = {
+          bitter: $scope.isBitterSelected,
+          salty: $scope.isSaltySelected,
+          sweet: $scope.isSweetSelected,
+          sour: $scope.isSourSelected,
+          url: "https://graph.facebook.com/v2.8/me?fields=posts%7Bmessage%7D&access_token=EAACEdEose0cBAElXAPCcOZAl1awywsp92H9jeAApMnrp3RWilo2MCQPqAsXc2BKEKEadKs4AKGekeEq3rGAHB5jZBUkVZC9bH26TH9m5TJmKm0TKPRLlWxUClMmS4MXAt8ZBn3YFYASeeQC1tYWKl4PF6wC776ROkpOauzNdtwZDZD"
+        };
         $location.path('/result');
       }
       else{
@@ -117,7 +145,8 @@ angular.module('munchApp')
         bitter: $scope.isBitterSelected,
         salty: $scope.isSaltySelected,
         sweet: $scope.isSweetSelected,
-        sour: $scope.isSourSelected
+        sour: $scope.isSourSelected,
+        url: "https://graph.facebook.com/v2.8/me?fields=posts%7Bmessage%7D&access_token=EAACEdEose0cBAElXAPCcOZAl1awywsp92H9jeAApMnrp3RWilo2MCQPqAsXc2BKEKEadKs4AKGekeEq3rGAHB5jZBUkVZC9bH26TH9m5TJmKm0TKPRLlWxUClMmS4MXAt8ZBn3YFYASeeQC1tYWKl4PF6wC776ROkpOauzNdtwZDZD"
       };
       localStorage.setItem('params', JSON.stringify(params));
       $location.path('/result');
