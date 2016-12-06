@@ -9,9 +9,12 @@
 <div>
   <div ng-controller="GpsviewCtrl" ng-init="request()"><p>Results for recipes</p>
 
-    <p>{{recipe[0].title}}</p>
-    <p>{{recipe[0].source_url}}</p>
-    <p>{{recipe[0].recipe_id}}</p>
+    <p>{{recipe.title}}</p>
+    <p>{{recipe.source_url}}</p>
+    <p>{{recipe.recipe_id}}</p>
+    <p><img src={{recipe.image_url}} alt="Mountain View" style="width:304px;height:228px;">
+      {{recipe.image_url}}</p>
+    <p>{{ingredients}}</p>
 
   </div>
 

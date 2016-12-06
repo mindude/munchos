@@ -14,9 +14,21 @@ angular.module('munchApp')
         search: 'ice cream'
       };
 
-      $http.put('https://ts4xmfum6f.execute-api.us-east-1.amazonaws.com/dev/connectToRecipesAPI', params)
+      $http.put('https://zi31az7mdh.execute-api.us-east-1.amazonaws.com/dev/connectToRecipesAPI', params)
         .success(function (data) {
-          $scope.recipe = data.recipes;
+          $scope.recipe = data.recipes[0];
+          var params2={
+            id: data.recipes[0].recipe_id
+          };
+
+          $http.put('https://zi31az7mdh.execute-api.us-east-1.amazonaws.com/dev/retrieveIngredientsAPI', params2 )
+            .success(function (data2){
+              $scope.ingredients = data2.recipes;
+          })
+          .error(function (error) {
+            console.log(error);
+          });
+
         })
         .error(function (error) {
           console.log(error);
