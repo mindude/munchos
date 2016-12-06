@@ -32,8 +32,9 @@ angular.module('munchApp')
           salty: $scope.isSaltySelected,
           sweet: $scope.isSweetSelected,
           sour: $scope.isSourSelected,
-          url: "https://graph.facebook.com/v2.8/me?fields=posts%7Bmessage%7D&access_token=EAACEdEose0cBAElXAPCcOZAl1awywsp92H9jeAApMnrp3RWilo2MCQPqAsXc2BKEKEadKs4AKGekeEq3rGAHB5jZBUkVZC9bH26TH9m5TJmKm0TKPRLlWxUClMmS4MXAt8ZBn3YFYASeeQC1tYWKl4PF6wC776ROkpOauzNdtwZDZD"
+          url: "https://graph.facebook.com/v2.8/me?fields=posts%7Bmessage%7D&access_token=EAACEdEose0cBAJYgLErixtfigvTmeL7JZA6QzpDNPT9E918KunVmvRyBGUHq0lBSjbUsygdWZCqW9ifLpq8j1CO51ro2QeQL19fyvIZBn3TwUa0b7CjbLxEWBZAV5nGlWZCJZBhkTdxgtrITFi073SsaTka0dgxrbyGb9In5eX2wZDZD"
         };
+        localStorage.setItem('params', JSON.stringify(params));
         $location.path('/result');
       }
       else{
@@ -56,8 +57,9 @@ angular.module('munchApp')
           salty: $scope.isSaltySelected,
           sweet: $scope.isSweetSelected,
           sour: $scope.isSourSelected,
-          url: "https://graph.facebook.com/v2.8/me?fields=posts%7Bmessage%7D&access_token=EAACEdEose0cBAElXAPCcOZAl1awywsp92H9jeAApMnrp3RWilo2MCQPqAsXc2BKEKEadKs4AKGekeEq3rGAHB5jZBUkVZC9bH26TH9m5TJmKm0TKPRLlWxUClMmS4MXAt8ZBn3YFYASeeQC1tYWKl4PF6wC776ROkpOauzNdtwZDZD"
+          url: "https://graph.facebook.com/v2.8/me?fields=posts%7Bmessage%7D&access_token=EAACEdEose0cBAJYgLErixtfigvTmeL7JZA6QzpDNPT9E918KunVmvRyBGUHq0lBSjbUsygdWZCqW9ifLpq8j1CO51ro2QeQL19fyvIZBn3TwUa0b7CjbLxEWBZAV5nGlWZCJZBhkTdxgtrITFi073SsaTka0dgxrbyGb9In5eX2wZDZD"
         };
+        localStorage.setItem('params', JSON.stringify(params));
         $location.path('/result');
       }
       else{
@@ -79,8 +81,9 @@ angular.module('munchApp')
           salty: $scope.isSaltySelected,
           sweet: $scope.isSweetSelected,
           sour: $scope.isSourSelected,
-          url: "https://graph.facebook.com/v2.8/me?fields=posts%7Bmessage%7D&access_token=EAACEdEose0cBAElXAPCcOZAl1awywsp92H9jeAApMnrp3RWilo2MCQPqAsXc2BKEKEadKs4AKGekeEq3rGAHB5jZBUkVZC9bH26TH9m5TJmKm0TKPRLlWxUClMmS4MXAt8ZBn3YFYASeeQC1tYWKl4PF6wC776ROkpOauzNdtwZDZD"
+          url: "https://graph.facebook.com/v2.8/me?fields=posts%7Bmessage%7D&access_token=EAACEdEose0cBAJYgLErixtfigvTmeL7JZA6QzpDNPT9E918KunVmvRyBGUHq0lBSjbUsygdWZCqW9ifLpq8j1CO51ro2QeQL19fyvIZBn3TwUa0b7CjbLxEWBZAV5nGlWZCJZBhkTdxgtrITFi073SsaTka0dgxrbyGb9In5eX2wZDZD"
         };
+        localStorage.setItem('params', JSON.stringify(params));
         $location.path('/result');
       }
       else{
@@ -102,8 +105,9 @@ angular.module('munchApp')
           salty: $scope.isSaltySelected,
           sweet: $scope.isSweetSelected,
           sour: $scope.isSourSelected,
-          url: "https://graph.facebook.com/v2.8/me?fields=posts%7Bmessage%7D&access_token=EAACEdEose0cBAElXAPCcOZAl1awywsp92H9jeAApMnrp3RWilo2MCQPqAsXc2BKEKEadKs4AKGekeEq3rGAHB5jZBUkVZC9bH26TH9m5TJmKm0TKPRLlWxUClMmS4MXAt8ZBn3YFYASeeQC1tYWKl4PF6wC776ROkpOauzNdtwZDZD"
+          url: "https://graph.facebook.com/v2.8/me?fields=posts%7Bmessage%7D&access_token=EAACEdEose0cBAJYgLErixtfigvTmeL7JZA6QzpDNPT9E918KunVmvRyBGUHq0lBSjbUsygdWZCqW9ifLpq8j1CO51ro2QeQL19fyvIZBn3TwUa0b7CjbLxEWBZAV5nGlWZCJZBhkTdxgtrITFi073SsaTka0dgxrbyGb9In5eX2wZDZD"
         };
+        localStorage.setItem('params', JSON.stringify(params));
         $location.path('/result');
       }
       else{
@@ -146,7 +150,7 @@ angular.module('munchApp')
         salty: $scope.isSaltySelected,
         sweet: $scope.isSweetSelected,
         sour: $scope.isSourSelected,
-        url: "https://graph.facebook.com/v2.8/me?fields=posts%7Bmessage%7D&access_token=EAACEdEose0cBAElXAPCcOZAl1awywsp92H9jeAApMnrp3RWilo2MCQPqAsXc2BKEKEadKs4AKGekeEq3rGAHB5jZBUkVZC9bH26TH9m5TJmKm0TKPRLlWxUClMmS4MXAt8ZBn3YFYASeeQC1tYWKl4PF6wC776ROkpOauzNdtwZDZD"
+        url: "https://graph.facebook.com/v2.8/me?fields=posts%7Bmessage%7D&access_token=EAACEdEose0cBAJYgLErixtfigvTmeL7JZA6QzpDNPT9E918KunVmvRyBGUHq0lBSjbUsygdWZCqW9ifLpq8j1CO51ro2QeQL19fyvIZBn3TwUa0b7CjbLxEWBZAV5nGlWZCJZBhkTdxgtrITFi073SsaTka0dgxrbyGb9In5eX2wZDZD"
       };
       localStorage.setItem('params', JSON.stringify(params));
       $location.path('/result');
