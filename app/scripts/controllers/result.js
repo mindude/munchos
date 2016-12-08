@@ -21,7 +21,7 @@ angular.module('munchApp')
           console.log(error);
         });
     };
-    var resultNumber = 6;
+    var resultNumber = 4;
     var results = localStorage['params'];
     var recipeNames = [];
     var ingredients = [];
@@ -61,7 +61,13 @@ angular.module('munchApp')
               $scope.sourceurl = sourceURL;
               $http.put('https://zi31az7mdh.execute-api.us-east-1.amazonaws.com/dev/retrieveIngredientsAPI', params2 )
                 .success(function (data2){
-                  ingredients.push(data2.recipes);
+                  var tempIngredient = data2.recipes;
+                  tempIngredient = JSON.stringify(tempIngredient);
+                  tempIngredient = tempIngredient.replace("[", "");
+                  tempIngredient = tempIngredient.replace("]", "");
+                  tempIngredient = tempIngredient.replace('"', "");
+                  tempIngredient = tempIngredient.replace(/"/g, " ");
+                  ingredients.push(tempIngredient);
                   $scope.ingredient = ingredients;
                 })
                 .error(function (error) {
